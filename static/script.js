@@ -1,8 +1,7 @@
 availableImages=['images/CM_Vorlage.png','images/cm_128bit.png','images/cm_kopf.png','images/cm_kopf32.png','images/cm_trainer.png','images/cm_vorlage2.png','images/cm_trainer.png','images/cm_vorlage2.png','images/CM_Vorlage.png','images/cm_128bit.png','images/cm_kopf.png','images/cm_kopf32.png','images/cm_trainer.png','images/cm_vorlage2.png','images/cm_trainer.png','images/cm_vorlage2.png']
- 
+const maindiv = document.getElementById("boardgame")
 function start(){
     let moves =0;
-    const maindiv = document.getElementById("boardgame")
     while (maindiv.firstChild) {
         maindiv.removeChild(maindiv.lastChild);
     }
