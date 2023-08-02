@@ -1,4 +1,4 @@
-availableImages=['images/CM_Vorlage.png','images/cm_128bit.png','images/cm_kopf.png','images/cm_kopf32.png','images/cm_trainer.png','images/cm_vorlage2.png','images/cm_trainer.png','images/cm_vorlage2.png','images/CM_Vorlage.png','images/cm_128bit.png','images/cm_kopf.png','images/cm_kopf32.png','images/cm_trainer.png','images/cm_vorlage2.png','images/cm_trainer.png','images/cm_vorlage2.png']
+availableImages=['images/CM_Vorlage.png','images/cm_128bit.png','images/cm_kopf.png','images/cm_kopf32.png','images/cm_trainer.PNG','images/cm_vorlage2.png','images/adiran_1.PNG']
 const maindiv = document.getElementById("boardgame")
 const scorediv = document.getElementById("score");
 function start(){
