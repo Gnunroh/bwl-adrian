@@ -1,4 +1,4 @@
-availableImages=['Images/bean.jpg','Images/doraemon.jpg','Images/minion.jpg','Images/mouse.jpg','Images/noddy.jpg','Images/popeye.jpg','Images/scooby.jpg','Images/shinchan.jpg','Images/bean.jpg','Images/doraemon.jpg','Images/minion.jpg','Images/mouse.jpg','Images/noddy.jpg','Images/popeye.jpg','Images/scooby.jpg','Images/shinchan.jpg']
+availableImages=['CM_Vorlage.png','cm_128bit.png','cm_kopf.png','cm_kopf32.png','cm_trainer.png','cm_vorlage2.png']
  
 function start(){
     let moves =0;
