@@ -2,6 +2,7 @@ availableImages=['images/CM_Vorlage.png','images/cm_128bit.png','images/cm_kopf.
  
 function start(){
     let moves =0;
+    const maindiv = document.getElementById("boardgame")
     while (maindiv.firstChild) {
         maindiv.removeChild(maindiv.lastChild);
     }
