@@ -3,14 +3,6 @@ const maindiv = document.getElementById("boardgame")
 const scorediv = document.getElementById("score");
 function start(){
     let moves =0;
-    // while (maindiv.firstChild) {
-    //     maindiv.removeChild(maindiv.lastChild);
-    // }
-    
-    // while (scorediv.firstChild) {
-    //    scorediv.removeChild(scorediv.lastChild);
-    // }
- 
     var row = document.createElement('div')
     ImagesCopy= JSON.parse(JSON.stringify( availableImages))
     for(let j=1;j<=16;j++){
