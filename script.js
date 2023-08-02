@@ -1,4 +1,4 @@
-availableImages=['CM_Vorlage.png','cm_128bit.png','cm_kopf.png','cm_kopf32.png','cm_trainer.png','cm_vorlage2.png']
+availableImages=['images/CM_Vorlage.png','images/cm_128bit.png','images/cm_kopf.png','images/cm_kopf32.png','images/cm_trainer.png','images/cm_vorlage2.png','images/cm_trainer.png','images/cm_vorlage2.png']
  
 function start(){
     let moves =0;
