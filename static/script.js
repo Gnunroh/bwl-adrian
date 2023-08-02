@@ -1,14 +1,15 @@
 availableImages=['images/CM_Vorlage.png','images/cm_128bit.png','images/cm_kopf.png','images/cm_kopf32.png','images/cm_trainer.png','images/cm_vorlage2.png','images/cm_trainer.png','images/cm_vorlage2.png','images/CM_Vorlage.png','images/cm_128bit.png','images/cm_kopf.png','images/cm_kopf32.png','images/cm_trainer.png','images/cm_vorlage2.png','images/cm_trainer.png','images/cm_vorlage2.png']
 const maindiv = document.getElementById("boardgame")
+const scorediv = document.getElementById("score");
 function start(){
     let moves =0;
-    while (maindiv.firstChild) {
-        maindiv.removeChild(maindiv.lastChild);
-    }
-    const scorediv = document.getElementById("score");
-    while (scorediv.firstChild) {
-       scorediv.removeChild(scorediv.lastChild);
-    }
+    // while (maindiv.firstChild) {
+    //     maindiv.removeChild(maindiv.lastChild);
+    // }
+    
+    // while (scorediv.firstChild) {
+    //    scorediv.removeChild(scorediv.lastChild);
+    // }
  
     var row = document.createElement('div')
     ImagesCopy= JSON.parse(JSON.stringify( availableImages))
