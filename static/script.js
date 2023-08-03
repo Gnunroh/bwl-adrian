@@ -30,9 +30,9 @@ function start(){
             if(currentlyshowing.length >= 1){
                 for(let i=0;i<currentlyshowing.length;i++)
                 {
-                    if(currentlyshowing[i].src != currImg.src)
+                    if(currentlyshowing[i].src != currImg.src){
                         setTimeout(start, 1000);                    
-                        currentlyshowing[i].classList.remove('showimg');
+                        currentlyshowing[i].classList.remove('showimg');}
                     else{
                         currentlyshowing[i].classList.add('match');
                         currImg.classList.add('match')
@@ -49,8 +49,8 @@ function start(){
                 document.getElementById('score').appendChild(button) 
             }
  
-            if(flag==0)
-            currImg.classList.add('showimg');
+            if(flag==0){
+            currImg.classList.add('showimg');}
         })
     }
 }
