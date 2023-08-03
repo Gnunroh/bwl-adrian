@@ -21,8 +21,8 @@ function start(){
             document.getElementById('boardgame').append(row);
             row = document.createElement('div');
         }
-    }
-        div.addEventListener('click',function(event)){
+    };
+        div.addEventListener('click',function(event){
             moves++;
             let curr = event.currentTarget.children
             let currImg = curr[0]
@@ -59,5 +59,5 @@ function start(){
                 button.appendChild(node);
                 document.getElementById('score').appendChild(button);
             }
-        }
+        });
 }
