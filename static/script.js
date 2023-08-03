@@ -1,10 +1,8 @@
 availableImages=['images/a_1.jpg','images/a_2.jpg','images/a_3.jpg','images/a_4.jpg','images/a_5.jpg','images/a_6.jpg','images/a_7.jpg','images/a_8.jpg','images/a_9.jpg','images/a_10.jpg','images/a_11.jpg','images/a_12.jpg','images/a_13.jpg','images/a_14.jpg','images/a_15.jpg','images/a_16.jpg','images/a_1.jpg','images/a_2.jpg','images/a_3.jpg','images/a_4.jpg','images/a_5.jpg','images/a_6.jpg','images/a_7.jpg','images/a_8.jpg','images/a_9.jpg','images/a_10.jpg','images/a_11.jpg','images/a_12.jpg','images/a_13.jpg','images/a_14.jpg','images/a_15.jpg','images/a_16.jpg']
 const maindiv = document.getElementById("boardgame")
 const scorediv = document.getElementById("score");
-function wait(seconds) {
-   return new Promise(resolve => {
-      setTimeout(resolve, seconds * 1000);
-   });
+function makeTileInvisible() {
+   currentlyshowing[i].classList.remove('showimg');
 } 
 function start(){
     let moves =0;
@@ -36,8 +34,8 @@ function start(){
                 for(let i=0;i<currentlyshowing.length;i++)
                 {
                     if(currentlyshowing[i].src != currImg.src){
-                        wait(2);                    
-                        currentlyshowing[i].classList.remove('showimg');}
+                        setTimeout(makeTileInvisible, 3000);
+                    }
                     else{
                         currentlyshowing[i].classList.add('match');
                         currImg.classList.add('match')
