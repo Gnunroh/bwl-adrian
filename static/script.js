@@ -9,20 +9,20 @@ function start(){
     ImagesCopy= JSON.parse(JSON.stringify( availableImages))
     for(let j=1;j<=32;j++){
         var div = document.createElement('div');
-        div.setAttribute('class','imgdiv')
-        var image = document.createElement('img')
+        div.setAttribute('class','imgdiv');
+        var image = document.createElement('img');
         randomImg = ImagesCopy.splice(Math.floor(Math.random() * ImagesCopy.length),1);
         image.setAttribute('src',randomImg);
-        image.setAttribute('class','hide')
-        div.appendChild(image)
+        image.setAttribute('class','hide');
+        div.appendChild(image);
         row.appendChild(div);
         
         if(j%8==0){
-            document.getElementById('boardgame').append(row)
-            row = document.createElement('div')
+            document.getElementById('boardgame').append(row);
+            row = document.createElement('div');
         }
     }
-        div.addEventListener('click',function(event){
+        div.addEventListener('click',function(event)){
             moves++;
             let curr = event.currentTarget.children
             let currImg = curr[0]
@@ -56,8 +56,8 @@ function start(){
                 let button = document.createElement('button');
                 button.setAttribute('class' , 'btn btn-warning');
                 let node= document.createTextNode("Du gewinnst! Benötigte Züge: "+moves);
-                button.appendChild(node)
-                document.getElementById('score').appendChild(button) 
+                button.appendChild(node);
+                document.getElementById('score').appendChild(button);
             }
         }
 }
