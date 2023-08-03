@@ -3,7 +3,8 @@ const maindiv = document.getElementById("boardgame")
 const scorediv = document.getElementById("score");
 
 function start(){
-    let moves =0;
+    let moves = 0;
+    let cardOpen = 0;
     var row = document.createElement('div')
     ImagesCopy= JSON.parse(JSON.stringify( availableImages))
     for(let j=1;j<=32;j++){
@@ -20,14 +21,17 @@ function start(){
             document.getElementById('boardgame').append(row)
             row = document.createElement('div')
         }
- 
         div.addEventListener('click',function(event){
             moves++;
             let curr = event.currentTarget.children
             let currImg = curr[0]
-           var currentlyshowing = document.getElementsByClassName('showimg');
-            currentlyshowing = document.getElementsByClassName('showimg');
-            let flag=0;
+            var currentlyshowing = document.getElementsByClassName('showimg');
+            if(cardOpen == 0){
+                currImg.classList.add('showimg');
+                let cardOpen = 1;
+            }
+            else{
+            let flag = 0;
             if(currentlyshowing.length >= 1){
                 for(let i=0;i<currentlyshowing.length;i++)
                 {
@@ -60,5 +64,6 @@ function start(){
             if(flag==0){
             currImg.classList.add('showimg');}
         })
+        let cardOpen = 0;}
     }
 }
