@@ -33,8 +33,11 @@ function start(){
                 {
                     if(currentlyshowing[i].src != currImg.src){
                        function makeTileInvisible() {
-                           let currentlyshowing = document.getElementsByClassName('showimg');
-                           currentlyshowing[i].classList.remove('showimg');
+                            let currentlyshowing = document.getElementsByClassName('showimg');
+                            let curr = event.currentTarget.children;
+                            let currImg = curr[0];
+                            currentlyshowing[i].classList.remove('showimg');
+                            currImg.classList.remove('showimg');
                         }  
                        setTimeout(makeTileInvisible, 3000);
                     }
