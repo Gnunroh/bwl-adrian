@@ -31,7 +31,8 @@ function start(){
                 for(let i=0;i<currentlyshowing.length;i++)
                 {
                     if(currentlyshowing[i].src != currImg.src)
-                    currentlyshowing[i].classList.remove('showimg');
+                        setTimeout(start, 1000);                    
+                        currentlyshowing[i].classList.remove('showimg');
                     else{
                         currentlyshowing[i].classList.add('match');
                         currImg.classList.add('match')
@@ -41,10 +42,9 @@ function start(){
             }
  
             if(document.getElementsByClassName('match').length==32){
-                alert("You won !!! ")
                 let button = document.createElement('button');
                 button.setAttribute('class' , 'btn btn-warning');
-                let node= document.createTextNode("You won!!! Moves "+moves);
+                let node= document.createTextNode("Du gewinnst! Benötigte Züge: "+moves);
                 button.appendChild(node)
                 document.getElementById('score').appendChild(button) 
             }
