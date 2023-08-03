@@ -1,11 +1,11 @@
-availableImages=['images/CM_Vorlage.png','images/cm_128bit.png','images/cm_kopf.png','images/cm_kopf32.png','images/cm_trainer.PNG','images/cm_vorlage2.png','images/adiran_1.PNG']
+availableImages=['images/a_1.jpg','images/a_2.jpg','images/a_3.jpg','images/a_4.jpg','images/a_5.jpg','images/a_6.jpg','images/a_7.jpg','images/a_8.jpg','images/a_9.jpg','images/a_10.jpg','images/a_11.jpg','images/a_12.jpg','images/a_13.jpg','images/a_14.jpg','images/a_15.jpg','images/a_16.jpg','images/a_1.jpg','images/a_2.jpg','images/a_3.jpg','images/a_4.jpg','images/a_5.jpg','images/a_6.jpg','images/a_7.jpg','images/a_8.jpg','images/a_9.jpg','images/a_10.jpg','images/a_11.jpg','images/a_12.jpg','images/a_13.jpg','images/a_14.jpg','images/a_15.jpg','images/a_16.jpg']
 const maindiv = document.getElementById("boardgame")
 const scorediv = document.getElementById("score");
 function start(){
     let moves =0;
     var row = document.createElement('div')
     ImagesCopy= JSON.parse(JSON.stringify( availableImages))
-    for(let j=1;j<=16;j++){
+    for(let j=1;j<=32;j++){
         var div = document.createElement('div');
         div.setAttribute('class','imgdiv')
         var image = document.createElement('img')
@@ -15,7 +15,7 @@ function start(){
         div.appendChild(image)
         row.appendChild(div);
         
-        if(j%4==0){
+        if(j%8==0){
             document.getElementById('boardgame').append(row)
             row = document.createElement('div')
         }
@@ -40,7 +40,7 @@ function start(){
                 }
             }
  
-            if(document.getElementsByClassName('match').length==16){
+            if(document.getElementsByClassName('match').length==32){
                 alert("You won !!! ")
                 let button = document.createElement('button');
                 button.setAttribute('class' , 'btn btn-warning');
