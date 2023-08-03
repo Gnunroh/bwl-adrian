@@ -36,7 +36,7 @@ function start(){
                 for(let i=0;i<currentlyshowing.length;i++)
                 {
                     if(currentlyshowing[i].src != currImg.src){
-                        wait(1);                    
+                        wait(2);                    
                         currentlyshowing[i].classList.remove('showimg');}
                     else{
                         currentlyshowing[i].classList.add('match');
