@@ -33,6 +33,7 @@ function start(){
                 {
                     if(currentlyshowing[i].src != currImg.src){
                        function makeTileInvisible() {
+                           let currentlyshowing = document.getElementsByClassName('showimg');
                            currentlyshowing[i].classList.remove('showimg');
                         }  
                        setTimeout(makeTileInvisible, 3000);
