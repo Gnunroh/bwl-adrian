@@ -21,6 +21,7 @@ function start(){
             document.getElementById('boardgame').append(row)
             row = document.createElement('div')
         }
+    }
         div.addEventListener('click',function(event){
             moves++;
             let curr = event.currentTarget.children
@@ -29,28 +30,26 @@ function start(){
             if(cardOpen == 0){
                 currImg.classList.add('showimg');
                 let cardOpen = 1;
+                let lastImg = currImg;
+                return lastImg;
             }
-            else{
-            let flag = 0;
-            if(currentlyshowing.length >= 1){
-                for(let i=0;i<currentlyshowing.length;i++)
-                {
-                    if(currentlyshowing[i].src != currImg.src){
-                       function makeTileInvisible() {
-                            let currentlyshowing = document.getElementsByClassName('showimg');
-                            let curr = event.currentTarget.children;
-                            let currImg = curr[0];
-                            currentlyshowing[i].classList.remove('showimg');
-                            currImg.classList.remove('showimg');
-                        }  
+            else if(currImg.src == lastImg.src){
+                    currImg.classList.add('showimg');
+                    lastImg.classList.add('showimg');
+                    currImg.classList.add('match');
+                    lastImg.classList.add('match');
+                    let cardOpen = 0;
+            }
+            else {
+                function makeTileInvisible() {
+                    let currentlyshowing = document.getElementsByClassName('showimg');
+                    let curr = event.currentTarget.children;
+                    let currImg = curr[0];
+                    currentlyshowing[i].classList.remove('showimg');
+                    currImg.classList.remove('showimg');
+                    let cardOpen = 0;
+                }  
                        setTimeout(makeTileInvisible, 3000);
-                    }
-                    else{
-                        currentlyshowing[i].classList.add('match');
-                        currImg.classList.add('match')
-                        flag=1;
-                    }
-                }
             }
  
             if(document.getElementsByClassName('match').length==32){
@@ -60,10 +59,5 @@ function start(){
                 button.appendChild(node)
                 document.getElementById('score').appendChild(button) 
             }
- 
-            if(flag==0){
-            currImg.classList.add('showimg');}
-        })
-        let cardOpen = 0;}
-    }
+        }
 }
