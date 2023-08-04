@@ -22,8 +22,8 @@
         }
         
         img{
-            width: 118px;
-            height: 118px;
+            width: 117px;
+            height: 117px;
             padding: 0px;;
         }
  
@@ -35,21 +35,40 @@
         .match, .showimg{
             visibility: visible !important;
         }
-        h1 {
-            height: 100px;
-            padding: 0px;
-            background-color: white;
-            color: black;
+
+        .validationBar {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            text-align: center;
+            flex-wrap: wrap;
         }
- 
+
+        .container {
+            width: 100%;
+            margin: 10px;
+        }
+
+        p {
+            margin: 0px;
+            font-size: large;
+            padding-right: 10px;
+        }
+
+        button {
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>bwl-adrian.de test7</h1>
-        <button class="btn btn-success" onclick="start()">Start game</button><br><br>
-  <div id="score"></div>
- 
+        <div class="validationBar">
+            <p>Wie alt ist Adrian 2023 geworden?</p>
+            <input type="password" placeholder="Alter als Zahl" id="tutorial">
+            <button class="btn btn-success" onclick="start()">Start game</button><br><br>
+        </div>
+    <div id="score"></div>
         <div id="boardgame"></div>
     </div>
     
