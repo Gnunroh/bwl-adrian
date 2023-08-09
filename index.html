@@ -8,6 +8,51 @@
     
     <script src="static/script.js"></script>
     <style>
+        .switch-field {
+	        display: flex;
+	        margin-left: 10px;
+	        overflow: hidden;
+        }
+
+        .switch-field input {
+            position: absolute !important;
+            clip: rect(0, 0, 0, 0);
+            height: 1px;
+            width: 1px;
+            border: 0;
+            overflow: hidden;
+        }
+
+        .switch-field label {
+            background-color: #e4e4e4;
+            color: rgba(0, 0, 0, 0.6);
+            font-size: 14px;
+            line-height: 1;
+            text-align: center;
+            padding: 8px 16px;
+            margin-right: -1px;
+            margin-bottom: 0px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+            transition: all 0.1s ease-in-out;
+        }
+
+        .switch-field label:hover {
+            cursor: pointer;
+        }
+
+        .switch-field input:checked + label {
+            background-color: #a5dc86;
+            box-shadow: none;
+        }
+
+        .switch-field label:first-of-type {
+            border-radius: 4px 0 0 4px;
+        }
+
+        .switch-field label:last-of-type {
+            border-radius: 0 4px 4px 0;
+        }
         .imgdiv{
             position: relative;
             display: inline-block;
@@ -33,7 +78,6 @@
         }
 
         .validationBar {
-            height: 50px;
             display: flex;
             align-items: center;
             justify-content: start;
@@ -59,14 +103,25 @@
         #boardgame {
             width: 100%;
         }
+
+        #scoreAlert {
+            margin: 20px 20px 20px 0px;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="container1">
         <div class="validationBar">
             <p>Wie alt ist Adrian 2023 geworden?</p>
-            <input type="password" placeholder="Alter als Zahl" id="tutorial">
-            <button class="btn btn-success" onclick="start()">Start game</button><br><br>
+            <input type="text" placeholder="Alter als Zahl" id="tutorial">
+            <button class="btn btn-success" onclick="start()">Start game</button>
+            <div class="switch-field">
+                <input type="radio" id="radio-one" name="switch-one" value=32 checked/>
+                <label for="radio-one">16 Paare</label>
+                <input type="radio" id="radio-two" name="switch-one" value=16 />
+                <label for="radio-two">8 Paare</label>
+            </div>
         </div>
     <div id="score"></div>
         <div id="boardgame"></div>
