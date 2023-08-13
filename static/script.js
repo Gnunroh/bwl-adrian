@@ -23,7 +23,7 @@ function setTileSize(height,width) {
         return TileWidth;
     }
     else {
-        TileWidth = height * 0.85 / 8;
+        TileWidth = width * 0.95 / 2;
         return TileWidth;
     }
 }
