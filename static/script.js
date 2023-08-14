@@ -76,6 +76,11 @@ function start(){
         document.getElementById('boardgame').append(div);
         div.addEventListener('click',function(event){
             moves++;
+            let movecounter = document.createElement('button');
+            button.setAttribute('class' , 'btn btn-warning');
+            node = document.createTextNode("Züge: " + moves);
+            button.appendChild(node);
+            document.getElementByID('valBar').appendChild(button);
             let curr = event.currentTarget.children
             let currImg = curr[0]
             var currentlyshowing = document.getElementsByClassName('showimg');
