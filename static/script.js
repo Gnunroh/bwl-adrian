@@ -79,8 +79,7 @@ function start(){
             let movecounter = document.createElement('button');
             button.setAttribute('class' , 'btn btn-warning');
             node = document.createTextNode("Züge: " + moves);
-            button.appendChild(node);
-            document.getElementByID('valBar').appendChild(button);
+            document.getElementByID('moveCounter').appendChild(node);
             let curr = event.currentTarget.children
             let currImg = curr[0]
             var currentlyshowing = document.getElementsByClassName('showimg');
