@@ -49,6 +49,13 @@ function protectpasscode() {
 function start(){
     tileWidth = setTileSize(screenHeight, screenWidth);
     tileCount = validate();
+    let movecounter = document.createElement('button');
+    movecounter.setAttribute('class' , 'btn btn-warning');
+    movecounter.setAttribute('id' , 'MoveCounter');
+    let node = "Platzhalter";
+    node = document.createTextNode("Züge: 0");
+    movecounter.appendChild(node);
+    document.getElementById('counterPlaceholder').appendChild(movecounter);
     console.log(tileCount);
     imgWidth = tileWidth - 3;
     console.log(tileWidth);
@@ -76,13 +83,8 @@ function start(){
         document.getElementById('boardgame').append(div);
         div.addEventListener('click',function(event){
             moves++;
-            let movecounter = document.createElement('button');
-            movecounter.setAttribute('class' , 'btn btn-warning');
-            movecounter.setAttribute('id' , 'MoveCounter');
-            let node = "Platzhalter";
-            node = document.createTextNode("Züge: " + moves);
-            movecounter.appendChild(node);
-            document.getElementById('counterPlaceholder').appendChild(movecounter);
+            let counterText = "Züge: " + moves;
+            document.getElementById('counterPlaceholder').innerText = counterText;
             let curr = event.currentTarget.children
             let currImg = curr[0]
             var currentlyshowing = document.getElementsByClassName('showimg');
