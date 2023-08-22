@@ -111,10 +111,8 @@ function start(){
                 console.log(moves);
                 if(moves >= tileCount*4) {
                     node = document.createTextNode("Du hast es geschafft! Hat ja auch lange genug gedauert... Züge: "+moves); 
-                } else if(moves >= tileCount*3){
-                    node = document.createTextNode("Du hast es geschafft in " + moves + ' Zügen. Geht da noch was?'); 
                 } else if(moves >= tileCount*2){
-                    node = document.createTextNode("Du hast es geschafft in " + moves + ' Zügen. Nicht schlecht!'); 
+                    node = document.createTextNode("Du hast es geschafft in " + moves + ' Zügen. Geht da noch was?'); 
                 } else {
                     node = document.createTextNode("Du hast es geschafft in nur " + moves + ' Zügen! Damit trägt du nun offiziell den Titel Mr. Media Worlwide!'); 
                 }
