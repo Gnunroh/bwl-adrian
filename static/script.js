@@ -84,7 +84,7 @@ function start(){
         div.addEventListener('click',function(event){
             moves++;
             let counterText = "Züge: " + moves;
-            document.getElementById('counterPlaceholder').innerText = counterText;
+            document.getElementById('MoveCounter').innerText = counterText;
             let curr = event.currentTarget.children
             let currImg = curr[0]
             var currentlyshowing = document.getElementsByClassName('showimg');
