@@ -77,9 +77,9 @@ function start(){
         div.addEventListener('click',function(event){
             moves++;
             let movecounter = document.createElement('button');
-            let button = document.createElement('button');
-            button.setAttribute('class' , 'btn btn-warning');
-            button.setAttribute('id' , 'MoveCounter');
+            movecounter.setAttribute('class' , 'btn btn-warning');
+            movecounter.setAttribute('id' , 'MoveCounter');
+            let node = Platzhalter"
             node = document.createTextNode("Züge: " + moves);
             document.getElementByID('MoveCounter').appendChild(node);
             let curr = event.currentTarget.children
