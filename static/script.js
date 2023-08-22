@@ -79,6 +79,7 @@ function start(){
             let movecounter = document.createElement('button');
             let button = document.createElement('button');
             button.setAttribute('class' , 'btn btn-warning');
+            button.setAttribute('id' , 'MoveCounter');
             node = document.createTextNode("Züge: " + moves);
             document.getElementByID('MoveCounter').appendChild(node);
             let curr = event.currentTarget.children
