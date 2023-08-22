@@ -82,7 +82,7 @@ function start(){
             let node = "Platzhalter";
             node = document.createTextNode("Züge: " + moves);
             movecounter.appendChild(node);
-            document.getElementById('counterPlaceholder').appendChild(button);
+            document.getElementById('counterPlaceholder').appendChild(movecounter);
             let curr = event.currentTarget.children
             let currImg = curr[0]
             var currentlyshowing = document.getElementsByClassName('showimg');
